@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body >
+    
+    <div class="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-900 bg-opacity-10" id="BookingModal" tabindex="-1" aria-labelledby="BookingModal" aria-modal="true" role="dialog">
+        <div class="relative w-full max-w-6xl mx-auto bg-white rounded-lg shadow-lg">
+            
+            <div class="px-4 py-2 border-b border-gray-200">
+                <h3 class="text-xl font-semibold">Reserve a table</h3>
+                <button type="button" class="absolute top-0 right-0 mt-2 mr-2 text-gray-400 hover:text-gray-600" data-bs-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+    
+            <div class="p-6">
+                <div class="booking">
+                    <form class="booking-form grid grid-cols-1 md:grid-cols-2 gap-4" role="form" action="#" method="post">
+                        <div class="col-span-1">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" name="name" id="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Your Name" required>
+                        </div>
+    
+                        <div class="col-span-1">
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="your@email.com" required>
+                        </div>
+    
+                        <div class="col-span-1">
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="123-456-7890">
+                        </div>
+    
+                        <div class="col-span-1">
+                            <label for="people" class="block text-sm font-medium text-gray-700">Number of persons</label>
+                            <input type="text" name="people" id="people" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="12 persons">
+                        </div>
+    
+                        <div class="col-span-1">
+                            <label for="date" class="block text-sm font-medium text-gray-700">Date</label>
+                            <input type="date" name="date" id="date" value="" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+                        </div>
+    
+                        <div class="col-span-1">
+                            <label for="time" class="block text-sm font-medium text-gray-700">Time</label>
+                            <select class="mt-1 block w-full p-2 border border-gray-300 rounded-md" name="time" id="time">
+                                <option value="5" selected>5:00 PM</option>
+                                <option value="6">6:00 PM</option>
+                                <option value="7">7:00 PM</option>
+                                <option value="8">8:00 PM</option>
+                                <option value="9">9:00 PM</option>
+                            </select>
+                        </div>
+    
+                        <div class="col-span-2">
+                            <label for="message" class="block text-sm font-medium text-gray-700">Special Request</label>
+                            <textarea class="mt-1 block w-full p-2 border border-gray-300 rounded-md" rows="4" id="message" name="message" placeholder=""></textarea>
+                        </div>
+    
+                        <div class="col-span-1 md:col-span-2 flex justify-end">
+                            <button type="submit" class="px-4 py-2 bg-black text-white rounded-md hover:bg-[#D43343]">Submit Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+            <div class="px-4 py-2 border-t border-gray-200"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
